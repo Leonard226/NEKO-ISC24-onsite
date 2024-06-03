@@ -1,0 +1,23 @@
+spack: 
+  specs: 
+    - openmpi%gcc@11.4.1 +atomics +cuda +cxx +legacylaunchers cuda_arch=90 fabrics=ucx schedulers=slurm
+      ^pmix%gcc@11.4.1
+      ^ucx%gcc@13.2.0 ~assertions ~debug +cma +cuda +dc +dm +gdrcopy +ib_hw_tm +mlx5_dv +optimizations +rc +rdmacm +ud +verbs cuda_arch=90
+      ^gdrcopy%gcc@11.4.1 +cuda cuda_arch=90
+      ^cuda@12.3%gcc@11.4.1 +allow-unsupported-compilers
+    - nvpl-blas%gcc@11.4.1 threads=openmp
+    - nvpl-lapack%gcc@11.4.1 threads=openmp
+    - json-fortran%gcc@11.4.1
+    - metis%gcc@11.4.1
+    - parmetis%gcc@11.4.1
+
+  view: true
+  concretizer:
+    unify: true
+    reuse: true
+  packages:
+    all:
+      providers:
+        mpi: [openmpi]
+
+
