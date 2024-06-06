@@ -36,6 +36,8 @@ We used `nvpl-blas` and `nvpl-lapack` as our BLAS/LAPACK implementation since `o
 
 Additionally, we used hardware-specific compiler flags like `-march=neoverse-v2 -mtune-neoverse-v2` and performance flags like `-O3 -funroll-loops`. We ensured that each MPI task is explicitly bound to exactly one GPU, resulting in a total of 5 MPI tasks.
 
+To figure out the best linear solver configuration, we tried out each combination of velocity and pressure solver and compared the runtime. In the end we choose `gmres` as our velocity solver and `fusedcg` as our pressure solver.
+
 To avoid some cache traffic we have also manually cleaned the caches before doing the performance run (`clean_caches.sh`).
 
 
