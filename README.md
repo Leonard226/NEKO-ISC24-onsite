@@ -6,6 +6,11 @@ Our cluster, called "Srbinz" (yes, like the Swiss cheese), consists of five node
 
 Out of the eight finalists, we were proud to be honored with 3rd place by the HPC Advisory Council.
 
+References: 
+- NEKO: https://neko.cfd/
+- ISC24 SCC hompage: https://www.isc-hpc.com/student-cluster-competition-2024.html
+- ISC24 SCC results, participants: https://www.hpcadvisorycouncil.com/events/student-cluster-competition/index.php 
+
 ### Tasks
 The tasks of the onsite competition are always similar to those presented in the virtual part. Additionally, one mystery application is presented, along with several benchmarks like HPL and HPCG. 
 
